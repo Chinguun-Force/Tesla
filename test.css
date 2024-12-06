@@ -1,0 +1,14 @@
+/* This has lower specificity */
+.block{
+    width: 100px;
+    height: 100px;
+    background-color: teal;
+}
+.block:hover ~ .test h1 {
+    color: red;
+}
+
+/* This might override the previous rule because it's more specific */
+.block + h1 {
+    color: blue;
+}
